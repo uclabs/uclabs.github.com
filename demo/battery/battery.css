@@ -1,0 +1,82 @@
+body {
+    font-family: arial;
+}
+
+.level, .status {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 0 2px black;
+    max-width: 100px;
+    z-index: 5;
+}
+
+.level {
+    top: 210px;
+    left: 130px;
+    font-size: 30px;
+}
+
+.status {
+    top: 242px;
+    left: 130px;
+    line-height: 16px;
+    font-size: 13px;
+}
+
+.indicator {
+    position: absolute;
+    top: 38px;
+    width: 320px;
+    height: 420px;
+}
+
+.indicator img {
+    position: absolute;
+}
+
+.indicator-cover {
+    width: 320px;
+    height: 420px;
+    z-index: 4;
+}
+
+.indicator-surface {
+    top: 60px;
+    left: 48px;
+    width: 223px;
+    height: 51px;
+    z-index: 3;
+}
+
+.indicator-capacity {
+    width: 320px;
+    height: 420px;
+    z-index: 2;
+    -webkit-mask-image: url(img/mask.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 0 78px;
+}
+
+.indicator-bottom {
+    width: 320px;
+    height: 420px;
+    z-index: 1;
+}
+
+.rotate .indicator {
+    /*-webkit-transform: rotate(0.5turn);*/
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: 54% 34%;
+}
+.rotate .level, .rotate .status {
+    max-width: 120px;
+}
+.rotate .level {
+    top: 130px;
+    left: 230px;
+}
+.rotate .status {
+    top: 162px;
+    left: 230px;
+}
