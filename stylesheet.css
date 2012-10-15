@@ -1,7 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,7 +47,7 @@ body {
   font-size: 1em;
   line-height: 1.5; 
   background: #e7e7e7 url(../img/body-bg.png) 0 0 repeat;
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: Helvetica, Arial, serif;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   color: #6d6d6d;
 }
@@ -90,7 +86,7 @@ header h2 {
 }
 
 .inner {
-  width: 620px;
+  width: 960px;
   margin: 0 auto;
 }
 
@@ -201,9 +197,9 @@ ul, ol, dl {
 
 hr {
   height: 1px;
+  width: 100%;
   line-height: 1px;
   margin-top: 1em;
-  padding-bottom: 1em;
   border: none;
   background: transparent url('../img/hr.png') 50% 0 no-repeat;
 }
@@ -309,12 +305,11 @@ dl dt {
 }
 
 footer {
-  background: transparent url('../img/hr.png') 0 0 no-repeat;
-  margin-top: 40px;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   font-size: 13px;
+  height: 30px;
   color: #aaa;
+  vertical-align: middle;
 }
 
 footer a {
@@ -322,6 +317,53 @@ footer a {
 }
 footer a:hover {
   color: #444;
+}
+
+.demo {
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  box-shadow: 2px 2px 10px #bbb;
+}
+
+.demo:hover {
+  box-shadow: 2px 2px 10px #ffad6a;
+}
+
+.demo_frame {
+  background-color: #ef7f24;
+}
+
+.demo_thumb {
+  width: 300px;
+  height: 225px;
+}
+
+.demo_name {
+  padding: 0 0 6px 8px;
+  color: #fff;
+  text-shadow: none;
+}
+
+
+
+.site_footer li {
+  list-style: none;
+  float: left;
+  margin: 8px 0;
+  padding: 0 10px;
+  line-height: 13px;
+  border-right: 1px solid #aaa;
+}
+
+.site_footer li:last-child {
+  border-right: none;
+}
+
+.logo {
+  float: right;
+  width: 79px;
+  height: 27px;
 }
 
 /* MISC */
@@ -365,7 +407,21 @@ footer a:hover {
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .logo {
+    width: 79px;
+    height: 27px;
+  }
+}
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {}
+@media only screen and (max-width: 480px) {
+  .site_footer li {
+  }
+  .logo {
+    float: left;
+    clear: both;
+    width: 52px;
+    height: 19px;
+  }
+}
