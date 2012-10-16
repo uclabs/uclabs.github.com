@@ -46,7 +46,7 @@ table {
 body {
   font-size: 1em;
   line-height: 1.5; 
-  background: #e7e7e7 url(../img/body-bg.png) 0 0 repeat;
+  background: #e7e7e7 url(img/body-bg.png) 0 0 repeat;
   font-family: Helvetica, Arial, serif;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   color: #6d6d6d;
@@ -60,8 +60,7 @@ a:hover {
 }
 
 header {
-  padding-top: 35px;
-  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 header h1 {
@@ -81,12 +80,12 @@ header h2 {
 }
 
 #container {
-  background: transparent url(../img/highlight-bg.jpg) 50% 0 no-repeat;
+  background: transparent url(img/highlight-bg.jpg) 50% 0 no-repeat;
   min-height: 595px;
 }
 
 .inner {
-  width: 960px;
+  width: 860px;
   margin: 0 auto;
 }
 
@@ -149,13 +148,13 @@ a.button span {
 }
 
 #download-zip span {
-  background: transparent url(../img/zip-icon.png) 12px 50% no-repeat;
+  background: transparent url(img/zip-icon.png) 12px 50% no-repeat;
 }
 #download-tar-gz span {
-  background: transparent url(../img/tar-gz-icon.png) 12px 50% no-repeat;
+  background: transparent url(img/tar-gz-icon.png) 12px 50% no-repeat;
 }
 #view-on-github span {
-  background: transparent url(../img/octocat-icon.png) 12px 50% no-repeat;
+  background: transparent url(img/octocat-icon.png) 12px 50% no-repeat;
 }
 #view-on-github {
   margin-right: 0;
@@ -199,9 +198,9 @@ hr {
   height: 1px;
   width: 100%;
   line-height: 1px;
-  margin-top: 1em;
+  margin-top: 10px;
   border: none;
-  background: transparent url('../img/hr.png') 50% 0 no-repeat;
+  background: transparent url(img/hr.png) 50% 0 no-repeat;
 }
 
 strong {
@@ -319,15 +318,26 @@ footer a:hover {
   color: #444;
 }
 
+.uc_labs {
+
+}
+
+.main {
+  margin-bottom: 25px;
+}
+
+.demo_title {
+}
+
 .demo {
   float: left;
-  margin-top: 10px;
-  margin-right: 10px;
-  box-shadow: 2px 2px 10px #bbb;
+  margin: 7px;
+  box-shadow: 2px 2px 8px #bbb;
+  /*-webkit-box-reflect: below 1px -webkit-gradient(linear, 0% 100%,100% 100%, from(rgba(255,255,255,0)), to(white));*/
 }
 
 .demo:hover {
-  box-shadow: 2px 2px 10px #ffad6a;
+  box-shadow: 2px 2px 14px #ffad6a;
 }
 
 .demo_frame {
@@ -335,8 +345,8 @@ footer a:hover {
 }
 
 .demo_thumb {
-  width: 300px;
-  height: 225px;
+  width: 200px;
+  height: 150px;
 }
 
 .demo_name {
@@ -344,7 +354,6 @@ footer a:hover {
   color: #fff;
   text-shadow: none;
 }
-
 
 
 .site_footer li {
@@ -360,10 +369,15 @@ footer a:hover {
   border-right: none;
 }
 
-.logo {
+.uc_logo {
   float: right;
-  width: 79px;
-  height: 27px;
+  width: 75px;
+  height: 21px;
+  box-shadow: 0 0 5px #aaa;
+  -webkit-filter: grayscale(100%);
+}
+.uc_logo:hover {
+  -webkit-filter: none;
 }
 
 /* MISC */
@@ -390,9 +404,12 @@ footer a:hover {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+  .uc_labs {
+    width: 140px;
+    height: 24px;
+  }
   header {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
   }
   #downloads {
     margin-bottom: 25px;
@@ -408,20 +425,16 @@ footer a:hover {
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 481px) and (max-width: 767px) {
-  .logo {
-    width: 79px;
-    height: 27px;
-  }
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 480px) {
   .site_footer li {
   }
-  .logo {
+  .uc_logo {
     float: left;
     clear: both;
-    width: 52px;
-    height: 19px;
+    width: 66px;
+    height: 18px;
   }
 }
