@@ -1,82 +1,16 @@
-body {
-    font-family: arial;
-}
-
-.level, .status {
-    position: absolute;
-    color: #fff;
-    text-shadow: 0 0 2px black;
-    max-width: 100px;
-    z-index: 5;
-}
-
-.level {
-    top: 210px;
-    left: 130px;
-    font-size: 30px;
-}
-
-.status {
-    top: 242px;
-    left: 130px;
-    line-height: 16px;
-    font-size: 13px;
-}
-
-.indicator {
-    position: absolute;
-    top: 38px;
-    width: 320px;
-    height: 420px;
-}
-
-.indicator img {
-    position: absolute;
-}
-
-.indicator-cover {
-    width: 320px;
-    height: 420px;
-    z-index: 4;
-}
-
-.indicator-surface {
-    top: 60px;
-    left: 48px;
-    width: 223px;
-    height: 51px;
-    z-index: 3;
-}
-
-.indicator-capacity {
-    width: 320px;
-    height: 420px;
-    z-index: 2;
-    -webkit-mask-image: url(img/mask.png);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: 0 78px;
-}
-
-.indicator-bottom {
-    width: 320px;
-    height: 420px;
-    z-index: 1;
-}
-
-.rotate .indicator {
-    /*-webkit-transform: rotate(0.5turn);*/
-    top: 0;
-    -webkit-transform: rotate(-90deg);
-    -webkit-transform-origin: 54% 34%;
-}
-.rotate .level, .rotate .status {
-    max-width: 120px;
-}
-.rotate .level {
-    top: 130px;
-    left: 230px;
-}
-.rotate .status {
-    top: 162px;
-    left: 230px;
+body{font-family:arial}
+.level,.status{color:#fff;max-width:100px;position:absolute;text-shadow:0 0 2px #000;z-index:5}
+.level{font-size:30px;left:130px;top:210px}
+.status{font-size:13px;left:130px;line-height:16px;top:242px}
+.indicator{height:420px;position:absolute;top:38px;width:320px}
+.indicator img{position:absolute}
+.indicator-cover{height:420px;width:320px;z-index:4}
+.indicator-surface{height:51px;left:48px;top:60px;width:223px;z-index:3}
+.indicator-capacity{-webkit-mask-image:url(img/mask.png);-webkit-mask-position:0 78px;-webkit-mask-repeat:no-repeat;height:420px;width:320px;z-index:2}
+.indicator-bottom{height:420px;width:320px;z-index:1}
+@media only screen and orientationlandscape {
+.indicator{-webkit-transform:rotate(-90deg);-webkit-transform-origin:54% 34%;top:0}
+.level,.rotate .status{max-width:120px}
+.level{left:230px;top:130px}
+.status{left:230px;top:162px}
 }
