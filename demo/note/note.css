@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+*,body,html{
+    margin:0 0;
+    padding:0 0;
+    overflow:hidden;
+}
+a{
+    text-decoration: none;
+    color:#333;
+}
+
+.box{
+    display:-webkit-box;
+    display:-moz-box;
+    display:box;
+}
+
+/* 列表栏样式 */
+.menu{
+    width: 260px;
+    position:absolute;
+    top:0;
+    left:0;
+    background:#32394A;
+}
+.menu header{
+    width: 260px;
+    height:43px;
+    background-image: -webkit-gradient(linear,left top,left bottom,form(#434B5B),to(#242B39));
+    border-bottom:1px solid #000;
+    border-top:1px solid #5F6673;
+    color:#FFF;
+    line-height: 43px;
+    text-align: center;
+}
+.menu .scrollable{
+    /*position:absolute;
+    z-index: 1;*/
+    width: 100%;
+    top:43px;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling:touch;
+}
+.menu .scrollable article{
+    position:relative;
+    display: block;
+    min-width: 43px;
+    line-height: 40px;
+    padding:3px 0 3px 8px;
+    background-color:#32394A;
+    border-bottom: 1px solid #242A37;
+    -webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+    font-size:16px;
+    color:#C4CCDA;
+    text-shadow: 0 1px 0 rgba(0,0,0,.6);
+}
+.menu header .button{
+    display: inline-block;
+    padding:.4em .6em;
+    margin:.4em 0;
+    background-color:#EFEFEF;
+    border-radius:0.4em;
+    color:#FFF;
+}
+.menu .clear{
+    color:#FFF;
+}
+
+/* 文章主体样式 回忆、乱了思绪 */
+.page{
+    position:relative;
+    z-index:2;
+    height:1000px;
+    min-width: 320px;
+    -webkit-transition:-webkit-transform 200ms ease-in;
+}
+.showMenu{
+    position:fixed;
+    -webkit-transform: translate3d(260px,0,0);
+}
+.page header{
+    height:46px;
+    background: -moz-linear-gradient(top, #6b84b6 0%, #2e4b89 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6b84b6), color-stop(100%,#2e4b89)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #6b84b6 0%,#2e4b89 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #6b84b6 0%,#2e4b89 100%); /* Opera 11.10+ */
+    background: -webkit-gradient(linear, left top, left bottom, form(#6b84b6), to(#2e4b89));
+    box-shadow: rgba(255,255,255,0.4) 1px -1px 1px 0px;
+}
+.page header .left,.page header .right{
+    -webkit-box-flex:1;
+    -moz-box-flex:1;
+    box-flex:1;
+    margin:0 .4em;
+}
+.page header .right{
+    text-align: right;
+}
+.page header .center{
+    -webkit-box-flex:2;
+    -moz-box-flex:2;
+    box-flex:2;
+}
+.page header .button{
+    display: inline-block;
+    padding:.4em .6em;
+    margin:.4em 0;
+    background-color:#EFEFEF;
+    border-radius:0.4em;
+}
+.page header .title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 46px;
+    color:#FFF;
+}
+.page .editContent{
+    font-size: 1.2em;
+}
+.page .editContent[contenteditable="true"]{
+    background-color:rgba(255,255,255,1);
+}
+.page .editContent[contenteditable="true"]:focus{
+    background-color:rgba(255,255,153,1);
+}
