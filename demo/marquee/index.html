@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type"  content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="full-screen" content="yes">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;" />
+<meta name="MobileOptimized" content="320"/>
+<title>marquee</title>
+
+<link type="text/css" rel="stylesheet" href="marquee.css">
+</head>
+
+<body>
+	<canvas id="led_pad" width="500" height="500"></canvas>
+
+	<!-- control button -->
+	<div class="control_btn"></div>
+
+	<!-- control pad -->
+	<div id="control_pad" class="control_pad">
+		<div class="word border_line">
+			<input type="text" class="msg" placeholder="type your word~" />
+		</div>
+		<div class="speed border_line">
+			<div class="btns" id="speed_up">faster</div>
+			<div class="btns" id="speed_down">slower</div>
+		</div>
+		<div class="color border_line">
+			<div class="btns" id="on_color">word</div>
+			<div class="btns" id="off_color">bg</div>
+		</div>
+		<div class="color border_line">
+			<div class="url_btn">generate url</div>
+		</div>
+		<div class="control_btns">
+			<div class="ok_btn btns">OK</div>
+			<div class="cancel_btn btns">CANCEL</div>
+		</div>
+	</div>
+
+	<!-- color picker -->
+	<div class="color_pad">
+		<div class="axis" id="red_axis"><div class="slip"></div></div>
+		<div class="axis" id="green_axis"><div class="slip"></div></div>
+		<div class="axis" id="blue_axis"><div class="slip"></div></div>
+		<div class="color_value">
+			<span id="red_value"></span>
+			<span id="green_value"></span>
+			<span id="blue_value"></span>
+		</div>
+		<div class="show_color"></div>
+		<div class="btns" id="color_ok">OK</div>
+	</div>
+
+	<!-- url pad -->
+	<div class="url_pad">
+		<div id="url"></div>
+		<div class="btns" id="url_ok" style="margin:10px 0px 0px 90px;">OK</div>
+	</div>
+
+	<script src="marquee.js"></script>
+	<script>
+		var m = marquee();
+		m.init();
+	</script>
+</body>
+</html>
