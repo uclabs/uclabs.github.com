@@ -46,7 +46,7 @@ table {
 body {
   font-size: 1em;
   line-height: 1.5; 
-  background: #e7e7e7 url(img/body-bg.png) 0 0 repeat;
+  background: #e7e7e7 url(../img/body-bg.png) 0 0 repeat;
   font-family: Helvetica, Arial, serif;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   color: #6d6d6d;
@@ -80,12 +80,12 @@ header h2 {
 }
 
 #container {
-  background: transparent url(img/highlight-bg.jpg) 50% 0 no-repeat;
+  background: transparent url(../img/highlight-bg.jpg) 50% 0 no-repeat;
   min-height: 595px;
 }
 
 .inner {
-  width: 860px;
+  width: 960px;
   margin: 0 auto;
 }
 
@@ -147,19 +147,6 @@ a.button span {
   height: 23px;
 }
 
-#download-zip span {
-  background: transparent url(img/zip-icon.png) 12px 50% no-repeat;
-}
-#download-tar-gz span {
-  background: transparent url(img/tar-gz-icon.png) 12px 50% no-repeat;
-}
-#view-on-github span {
-  background: transparent url(img/octocat-icon.png) 12px 50% no-repeat;
-}
-#view-on-github {
-  margin-right: 0;
-}
-
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
   color: #222;
@@ -200,7 +187,7 @@ hr {
   line-height: 1px;
   margin-top: 10px;
   border: none;
-  background: transparent url(img/hr.png) 50% 0 no-repeat;
+  background: transparent url(../img/hr.png) 50% 0 no-repeat;
 }
 
 strong {
@@ -304,10 +291,13 @@ dl dt {
 }
 
 footer {
-  padding-bottom: 10px;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
   font-size: 13px;
   height: 30px;
-  color: #aaa;
+  color: #666;
   vertical-align: middle;
 }
 
@@ -315,15 +305,49 @@ footer a {
   color: #666;
 }
 footer a:hover {
-  color: #444;
+  color: #333;
 }
 
 .uc_labs {
 
 }
 
+.row {
+
+}
+
+.row div {
+  float: left;
+}
+
+.span2 {
+  width: 160px;
+}
+
+.span4 {
+  width: 320px;
+}
+
+.span6 {
+  width: 480px;
+}
+
+.span8 {
+  width: 640px;
+}
+
+.list-style-none li {
+  list-style: none;
+  padding-left: 0;
+}
+
 .main {
-  margin: 25px 0;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 13px;
+  color: #666;
 }
 
 .demo_title {
@@ -355,22 +379,7 @@ footer a:hover {
   text-shadow: none;
 }
 
-
-.site_footer li {
-  list-style: none;
-  float: left;
-  margin: 8px 0;
-  padding: 0 10px;
-  line-height: 13px;
-  border-right: 1px solid #bbb;
-}
-
-.site_footer li:last-child {
-  border-right: none;
-}
-
 .uc_logo {
-  float: right;
   width: 75px;
   height: 21px;
   box-shadow: 0 0 5px #aaa;
@@ -429,11 +438,7 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 480px) {
-  .site_footer li {
-  }
   .uc_logo {
-    float: left;
-    clear: both;
     width: 66px;
     height: 18px;
   }
