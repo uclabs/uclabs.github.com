@@ -61,6 +61,7 @@ a:hover {
 
 header {
   padding-top: 25px;
+  text-align: center;
 }
 
 header h1 {
@@ -309,7 +310,6 @@ footer a:hover {
 }
 
 .uc_labs {
-
 }
 
 .row {
