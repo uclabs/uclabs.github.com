@@ -297,7 +297,6 @@ footer {
   padding-top: 20px;
   padding-bottom: 50px;
   font-size: 13px;
-  height: 30px;
   color: #666;
   vertical-align: middle;
 }
@@ -380,13 +379,45 @@ footer a:hover {
 }
 
 .uc_logo {
-  width: 75px;
-  height: 21px;
-  box-shadow: 0 0 5px #aaa;
+  padding: 10px 0 20px 0;
+  text-align: center;
   -webkit-filter: grayscale(100%);
 }
 .uc_logo:hover {
   -webkit-filter: none;
+}
+
+.uc_logo img {
+  width: 75px;
+  height: 21px;
+  box-shadow: 0 0 5px #aaa;
+}
+
+.icon-sina-weibo, .icon-qq-weibo, .icon-163-weibo, .icon-sohu-weibo {
+  margin-bottom: -5px;
+  height: 20px;
+  background-size: 12px 12px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.icon-sina-weibo {
+  background-image: url(../img/icons/sina-weibo.png);
+  opacity: 0.7;
+}
+
+.icon-qq-weibo {
+  background-image: url(../img/icons/qq-weibo.png);
+  opacity: 0.9;
+}
+
+.icon-163-weibo {
+  background-image: url(../img/icons/163-weibo.png);
+}
+
+.icon-sohu-weibo {
+  background-image: url(../img/icons/sohu-weibo.png);
+  opacity: 0.9;
 }
 
 /* MISC */
