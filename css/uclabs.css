@@ -339,6 +339,11 @@ footer a:hover {
   width: 620px;
 }
 
+.span10 {
+  padding-left: 20px;
+  width: 780px;
+}
+
 .list-style-none li {
   list-style: none;
   padding-left: 0;
@@ -351,6 +356,11 @@ footer a:hover {
   padding-bottom: 20px;
   font-size: 13px;
   color: #666;
+}
+
+.demo-list {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .demo_title {
