@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1 minimum-scale=1" />
+    <title>模拟按摩功能的震动棒</title>
+
+    <style>
+        body{
+            margin:0;
+        }
+        .btn{
+            width: 64px;
+            height:24px;
+            font-size:12px;
+            text-align: center;
+            line-height: 24px;
+            border: 1px solid #DDD;
+            background: -o-linear-gradient(top,#FFF 0%,#EEE 100%);
+            border-radius:4px;
+            text-shadow:1px 1px 0px #FFF;
+        }
+        .debugger{
+            position:absolute;
+            right:2px;
+            top:2px;
+            background:-webkit-linear-gradient(top,#222 0%,#444 100%);
+            opacity:.3;
+            width:100px;
+            height:150px;
+            overflow-y:auto;
+            color:#FFF;
+            z-index:100;
+        }
+        .debugger p{
+            margin:0;
+            padding:0;
+            font-size:10px;
+        }
+    </style>
+
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript" src="vibrator.js"></script>
+</body>
+</html>
