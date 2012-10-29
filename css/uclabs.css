@@ -320,19 +320,23 @@ footer a:hover {
 }
 
 .span2 {
-  width: 160px;
+  padding-left: 20px;
+  width: 140px;
 }
 
 .span4 {
-  width: 320px;
+  padding-left: 20px;
+  width: 300px;
 }
 
 .span6 {
-  width: 480px;
+  padding-left: 20px;
+  width: 460px;
 }
 
 .span8 {
-  width: 640px;
+  padding-left: 20px;
+  width: 620px;
 }
 
 .list-style-none li {
