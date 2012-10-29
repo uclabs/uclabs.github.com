@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <!--<meta name="apple-touch-fullscreen" content="yes" />-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>基于重力加速度感应器的小球</title>
+	
+    <style>
+        .output{
+            position: absolute;;
+            top:0;
+            left:0;
+            color:#FFF;
+        }
+        .menu{
+            position: absolute;
+            top:24px;
+            left:10px;
+            height:30px;
+            padding:2px 5px;
+            border:1px solid #3A3A3A;
+            border-radius:20px;
+            -webkit-border-radius:20px;
+            background: -webkit-linear-gradient(top,#4A4A4A 0%,#3F4550 100%);
+            opacity:0.82;
+        }
+        .menu ul{
+            -webkit-padding-start:0;
+            -webkit-margin-before:0;
+            height: 30px;
+            padding-right: 5px;
+            padding-left: 10px;
+            display: inline-block;
+        }
+        .menu ul li{
+            display: inline-block;
+            line-height: 30px;
+        }
+        .menu ul li:after{
+            content:' |';
+            color:#FFF;
+        }
+        .menu ul li:last-child:after{
+            content:'';
+        }
+        .menu a{
+            color:#FFF;
+            text-decoration: none;
+            line-height: 30px;
+        }
+        .menu .btn-ball{
+            display: inline-block;
+            height:30px;
+            width:30px;
+            box-shadow:0px 1px 1px #000;
+            -webkit-border-radius:15px;
+            background: -webkit-linear-gradient(top,#FFBC24 0%,#FF7800 100%);
+            opacity:1;
+        }
+        .menu .arrow{
+            display: inline-block;;
+            width: 10px;
+            height:10px;
+            text-align: center;
+            border-bottom: 2px solid #FFF;
+            border-right:2px solid #FFF;
+            -webkit-transform:rotate(-45deg);
+            margin-left: 6px;
+            margin-top:9px;
+        }
+        body{
+            margin:0;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="#">滚球</a></li>
+            <!--<li><a href="#">简介</a></li>
+            <li><a href="#">返回</a></li>-->
+        </ul>
+        <div class="btn-ball"><span class="arrow"></span></div>
+    </div>
+    <div id="loading" class="loading"></div>
+    <canvas id="ball">对不起，你当前的浏览器不支持Canvas标签。</canvas>
+
+    <script type="text/javascript">
+
+        var cur_x = 0,cur_y = 0;
+
+        var ball_radius = 50;
+        var initialized = false;
+
+        var ww,wh;
+
+        var speed_x = 0,speed_y = 0;
+
+        var accel_x,accel_y;
+
+        var friction_accel = 0.02;
+
+        var interval = 33; //ms, 30 fps
+        var bg_color = "#EEEEEE";
+        var fg_color = "#333";
+
+        var absorbing_rate = 0.5;
+
+        var opera_pix_bg=new Image();
+        opera_pix_bg.src="img/bg.jpg";
+
+        //小球图片源文件名
+        var ballImages = ['img/ball-1.png','img/ball-2.png','img/ball-3.png','img/ball-4.png','img/ball-5.png','img/ball-6.png'],
+            //存放小球图片对象
+            ballImagesObj = [],
+            //小球图片总数
+            ballImagesLen = ballImages.length,
+            //加载图片统计
+            loadingCount = 0,
+            //加载循环变量
+            loadTimeout,
+            //isChangeImage = false,
+            ballIndex = 0;
+
+
+        function $(id){
+            return document.getElementById(id);
+        }
+        
+        //初始化图片对象
+        function setImages(){
+            for(var i=0;i<ballImagesLen;i++){
+                var tmp = new Image();
+                tmp.src = ballImages[i];
+                tmp.onload = function(){
+                    loadingCount++;
+                }
+                ballImagesObj.push(tmp);
+            }
+        }
+
+        //增加loading提示加载图片
+        function loadImages(){
+            if(loadingCount == ballImagesLen){
+                window.clearTimeout(loadTimeout);
+                init();
+                return;
+            }
+            loadTimeout = window.setTimeout('loadImages()',100);
+        }
+
+        //随机生成小球索引
+        function randomBallIndex(){
+            var tempIndex = Math.round(Math.random()*(ballImagesLen - 1));
+            if(ballIndex == tempIndex){
+                randomBallIndex();
+            }else{
+                ballIndex = tempIndex;
+            }
+
+        }
+
+
+        //判断方向
+        function inSameDirection(a, b){
+            return a > 0 && b > 0 || a <= 0 && b <= 0;
+        }
+
+        //返回位置坐标和速度
+        function getCurpos(cur_pos, speed, accel, boundary){
+            if (speed == 0 && Math.abs(accel) <= friction_accel)
+                return [cur_pos, speed];
+
+            start_speed = speed;
+            f_accel = (speed > 0 ? -friction_accel:friction_accel);
+            speed += accel + f_accel;
+
+            if (!inSameDirection(f_accel, accel) &&
+                    !inSameDirection(f_accel, start_speed) &&
+                    !inSameDirection(start_speed, speed))
+            {
+                speed = 0;
+            }
+
+            cur_pos += (start_speed + speed)/2;
+
+
+            if (cur_pos > boundary - ball_radius)
+            {
+                cur_pos= boundary - ball_radius;
+                speed = -speed * absorbing_rate;
+                randomBallIndex();
+            }
+            else if (cur_pos < 0)
+            {
+                cur_pos = 0;
+                speed = -speed * absorbing_rate;
+                randomBallIndex();
+            }
+
+            return [cur_pos, speed];
+        }
+
+        //实时设置当前坐标值
+        function physics(){
+            var x = getCurpos(cur_x, speed_x, accel_x, ww);
+            cur_x = x[0];
+            speed_x = x[1];
+            var y = getCurpos(cur_y, speed_y, accel_y, wh);
+            cur_y = y[0];
+            speed_y = y[1];
+        }
+
+        //画图
+        function paint(){
+            var ball_canvas = document.getElementById('ball');
+            var ctx = ball_canvas.getContext('2d');
+
+            ctx.save();
+
+            physics();
+
+            ctx.drawImage(opera_pix_bg, 0,0, ww, wh );
+            ctx.drawImage(ballImagesObj[ballIndex], cur_x,cur_y, 50, 50 );
+
+            ctx.restore();
+
+            setTimeout("paint()", interval);
+        }
+
+        //清除canvas画布
+        function clearCanvas(){
+            var ball_canvas = document.getElementById('ball');
+            var ctx = ball_canvas.getContext('2d');
+            ctx.fillRect(0,0, ww, wh);
+        }
+
+        //更新canvas为全屏状态，并开始实时跟踪小球位置
+        function update(evt){
+            accel_x =  Math.sin(evt.gamma / 180 * Math.PI);
+            accel_y =  Math.sin(evt.beta  / 180 * Math.PI);
+
+            if (!initialized)
+            {
+                cur_x = ww /2 + ball_radius;
+                cur_y = wh /2 + ball_radius;
+                initialized = true;
+                //clearCanvas();
+                paint();
+            }
+        }
+
+        //预加载
+        function preload(){
+            var ball_canvas = document.getElementById('ball');
+            if (ball_canvas.width != window.outerWidth ||
+                    ball_canvas.height != window.outerHeight)
+            {
+                ball_canvas.width = window.outerWidth;
+                ball_canvas.height = window.outerHeight;
+
+            }
+
+            ww = ball_canvas.width;
+            wh = ball_canvas.height;
+            paint();
+        }
+        
+        //初始化所有
+        function init(){
+            preload();
+            window.addEventListener('deviceorientation', update, true);
+        }
+
+        (function(){
+            setImages();
+            loadImages();
+        })();
+        
+
+    </script>
+</body>
+</html>
