@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>简单的一天</title>
+</head>
+<style> 
+html,body{ height:100%; width:100%;}
+body,div,p{ margin:0; padding:0}
+
+.sky{ width:100%; height:100%; position:relative; background:#525252; -webkit-animation:sky 10s forwards; overflow:hidden}
+@-webkit-keyframes sky {
+	0% { background-color: #525252;}
+	33% { background-color: #6293e5;}
+	66% {background-color: #6293e5;}
+	100% {background-color: #525252;}
+}
+
+.ground,.sun{ position:absolute;bottom:0;}
+.ground{ width:100%; height:154px;  background:#6C5228; -webkit-animation:ground 10s forwards}
+@-webkit-keyframes ground {
+	0% { background-color: #6C5228;}
+	33% { background-color: #48a037;}
+	66% {background-color: #48a037;}
+	100% {background-color: #6C5228;}
+}
+
+.sun{ width:130px; height:130px; border-radius:70px; -webkit-animation:sun 10s forwards}
+@-webkit-keyframes sun {
+	0% {bottom: 0;left: 80%;background: #f00;}
+	33% {bottom: 75%;left: 80%;background: #ffd630;}
+	66% {bottom: 75%;left: 10%;background: #ffd630;}
+	100% {bottom: 0;left: 10%;background: #f00;}
+}
+
+.cloud{ position:absolute;top: 50px;left: -100px;opacity: 0; -webkit-animation:cloud 10s forwards}
+.cloud-1,.cloud-2,.cloud-3{border-radius: 90px / 30px;width:160px;height: 50px;background: white;position: absolute;}
+.cloud-1{top: 10px;}
+.cloud-2{left: 50px;top: 0;}
+.cloud-3{left: 110px;top: 20px;}
+@-webkit-keyframes cloud {
+	0% {opacity: 0;left: -10%;}
+	40% {opacity: 1;}
+	66.6% {opacity: 1;left: 20%;}
+	100% {opacity: 0;left: 80%;}
+}
+
+.moon,.moon2{width:100px; height:100px; border-radius:50px; position:absolute;}
+.moon{
+	 background:#fff; top:20px; left:-15%;overflow:hidden; -webkit-animation:moon 2s 9s forwards;
+}
+.moon2{ top:-20px; left:20px; background:#525252}
+@-webkit-keyframes moon {
+	0% {opacity: 0;
+		left: -15%;}
+	100% {opacity: 1;left: 20%;}
+}
+
+
+.star{ width:200px; height:182px; position:absolute; opacity:0; -webkit-transform:scale(.1); -webkit-animation:star 2s 9s infinite;}
+.star1{ top:-40px; left:10%;}
+.star2{ top:100px; left:15%;}
+.star3{ top:20px; left:1%;}
+.star-five,.star-five:after,.star-five:before {
+	color:#FF9;
+    width: 0px;
+    height: 0px;
+	position:absolute;
+}
+.star-five,.star-five:after{
+   border-right:  100px solid transparent;
+   border-left:   100px solid transparent;
+   border-bottom: 70px  solid #FF9;
+
+}
+
+.star-five:after,.star-five:before{content: '';}
+.star-five {
+   top:60px; 
+   left:3px;
+   -webkit-transform: rotate(35deg);
+} 
+   
+
+.star-five:before {
+   border-bottom: 80px solid #FF9;
+   border-left:  30px solid transparent;
+   border-right: 30px solid transparent;
+   top: -45px;
+   left: -65px;
+   -webkit-transform: rotate(-35deg);
+}
+
+.star-five:after {
+   top: 3px;
+   left: -105px;
+   -webkit-transform: rotate(-70deg);
+}
+@-webkit-keyframes star {
+	0% {opacity: 0; -webkit-transform:scale(.1);}
+	60% {opacity: .5;-webkit-transform:scale(.12);}
+	100% {opacity: 1;-webkit-transform:scale(.15);}
+}
+</style>
+<body>
+
+<div class="sky">
+	<div class="sun"></div>
+    <div class="cloud">
+        <div class="cloud-1"></div>
+        <div class="cloud-2"></div>
+        <div class="cloud-3"></div>
+    </div>
+    <div class="moon">
+    	<div class="moon2"></div>
+    </div>
+    <div class="star star1"><div class="star-five"></div></div>
+    <div class="star star2"><div class="star-five"></div></div>
+    <div class="star star3"><div class="star-five"></div></div>
+	<div class="ground"></div>
+</div>
+</body>
+</html>
