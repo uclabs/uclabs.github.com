@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Image Wall</title>
+<link rel="stylesheet" type="text/css" href="wall.css">
+<script src="lib/zepto.js"></script>
+<script src="lib/lang.js"></script>
+<script src="lib/gesture.js"></script>
+<script src="wall.js"></script>
+</head>
+<body>
+<script>
+var screen = window.screen,
+    sWidth = screen.availWidth,
+    sHeight = screen.availHeight,
+    $body = $('body');
+var photos = [
+    {
+        url: 'img/photo-1.jpg'
+    },
+    {
+        url: 'img/photo-2.jpg'
+    },
+    {
+        url: 'img/photo-3.jpg'
+    },
+    {
+        url: 'img/photo-4.jpg'
+    },
+    {
+        url: 'img/photo-5.jpg'
+    },
+    {
+        url: 'img/photo-6.jpg',
+        label: 'plane'
+    }
+];
+for (var i = 0; i < photos.length; i++) {
+    var photo = photos[i],
+        $photo = $('<div>').addClass('photo'),
+        $frame = $('<div>').addClass('frame').appendTo($photo)
+        $image = $('<img>').addClass('image').appendTo($frame);
+    $image.on("contextmenu", function(e){ return false; })
+        .attr('src', photo.url);
+    $photo.css({
+            'top': Math.random() * sHeight * 0.7,
+            'left': Math.random() * sWidth * 0.7,
+            '-webkit-transform': 'rotate(' + (Math.random() * 50 + Math.random() * -50) + 'deg)',
+            'zIndex': i
+        });
+    if (photo.label) {
+        var $label = $('<div>').addClass('label').text(photo.label).appendTo($frame);
+    }
+    $body.append($photo);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body {
+    background: url(img/bg.jpg) repeat-x;
+}
+
+.photo {
+    position: absolute;
+    border: 1px solid #333;
+    -webkit-box-shadow: 5px 5px 10px #555;
+}
+
+.frame {
+    padding: 7px 5px;
+    background-color: #fff;
+}
+
+.image {
+    width: 240px;
+    height: 150px;
+}
+
+.label {
+    padding-top: 2px;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: arial;
+    text-align: right;
+    color: #333;
+}
+
+.holding {
+
+}
