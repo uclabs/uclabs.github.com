@@ -3,6 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href='css/font-open-sans.css' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/uclabs.css" media="screen" />
     <title>UC Labs</title>
@@ -22,32 +23,47 @@
 
           <section class="demo-info">
             <div class="row clearfix">
-              <div class="span6">
+              <div class="span6 column">
                 <h2>照片墙</h2>
                 <ul>
                   <li>nino</li>
                   <li>更新于 Otc 30, 2012</li>
                   <li>提交于 Otc 30, 2012</li>
                 </ul>
-                <h4>利用多指触摸功能，可以随意将照片拖动、缩放、旋转。</h4>
-                <a>运行 DEMO</a>
+                <h5>利用多指触摸功能，可以随意将照片拖动、缩放、旋转。</h5>
+                <div class="launch-box">
+                  <a href="demo/image-wall/" class="launch-demo">运行 DEMO</a>
+                </div>
+                <div class="bshare-custom share-box"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到豆瓣" class="bshare-douban"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div>
+                <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=d69d91f9-ae29-4b7e-ab51-b2447503db5f&amp;pophcol=2&amp;lang=zh"></script>
+                <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
               </div>
-              <div class="span6">
-                <img src="screenshot/image-wall/thumbnail.jpg"></img>
+              <div class="span6 column">
+                <div id="demo-screenshot">
+                </div>
               </div>
             </div>
             <div class="row clearfix">
-              <div class="span8">
+              <div class="span8 column">
                 <h4>更多介绍</h4>
                 <p>充分利用触屏的多指触摸功能，让用户用最自然、最直接的方式，将照片拖放、缩放和旋转。</p>
-                <h4>所使用的技术</h4>
-                <p>充分利用触屏的多指触摸功能，让用户用最自然、最直接的方式，将照片拖放、缩放和旋转。</p>
+                <h4>所使用的H5特性</h4>
+                <ul>
+                  <li>TouchEvent</li>
+                  <li>CSS3</li>
+                </ul>
                 <h4>浏览器兼容情况</h4>
-                <p>充分利用触屏的多指触摸功能，让用户用最自然、最直接的方式，将照片拖放、缩放和旋转。</p>
+                <ul>
+                  <li>8.6+</li>
+                  <li>Chrome 22</li>
+                  <li>Firefox</li>
+                </ul>
                 <h4>评论</h4>
-                <p>充分利用触屏的多指触摸功能，让用户用最自然、最直接的方式，将照片拖放、缩放和旋转。</p>
+                  <div id="disqus_thread" style="width: 100%;">
+                    评论模块加载中...
+                  </div>
               </div>
-              <div class="span4">
+              <div class="span4 column">
                 <h4>作者其他作品</h4>
                 <p>充分利用触屏的多指触摸功能，让用户用最自然、最直接的方式，将照片拖放、缩放和旋转。</p>
                 <h4>其他类似作品</h4>
@@ -68,11 +84,11 @@
 
         <footer class="">
           <div class="row clearfix">
-            <div class="span4">
+            <div class="span4 column">
               <h2>资源</h2>
               <ul class="icons list-style-none">
                 <li><i class="icon-github"></i> 
-                  <a href="https://github.com/uclabs" target="_blank">源代码</a>
+                  <a href="https://github.com/uclabs" target="_blank">源码</a>
                 </li>
                 <li><i class="icon-file"></i> 
                   <a href="#" target="_blank">JavaScript 编码规范</a>
@@ -80,12 +96,15 @@
                 <li><i class="icon-file"></i> 
                   <a href="#" target="_blank">源码管理规范</a>
                 </li>
+                <li><i class="icon-road"></i> 
+                  <a href="https://trello.com/b/c0jXfDdj" target="_blank">路线图</a>
+                </li>
                 <li><i class="icon-flag"></i> 
-                  <a href="#" target="_blank">路线图</a>
+                  <a href="https://trello.com/b/c0jXfDdj" target="_blank">开发进度</a>
                 </li>
               </ul>
             </div>
-            <div class="span4">
+            <div class="span4 column">
               <h2>关注我们</h2>
               <ul class="icons list-style-none">
                 <li><i class="icon-twitter"></i> 
@@ -103,16 +122,19 @@
                 <li><i class="icon-sohu-weibo"></i> 
                   <a href="http://t.sohu.com/uclabs" target="_blank">搜狐微博</a>
                 </li>
+                <li><i class="icon-group"></i> 
+                  <a href="#members">实验室成员</a>
+                </li>
               </ul>
             </div>
-            <div class="span4">
+            <div class="span4 column">
               <h2>联系我们</h2>
               <ul class="icons list-style-none">
                 <li><i class="icon-envelope"></i> 
-                  <a href="mailto:labs.uc@gmail.com">labs.uc@gmail.com</a>
+                  <a href="mailto:labs.uc@gmail.com" alt="与 UC Labs 直接联系">labs.uc@gmail.com</a>
                 </li>
-                <li><i class="icon-group"></i> 
-                  <a href="mailto:uclabs@googlegroups.com">uclabs@googlegroups.com</a>
+                <li><i class="icon-comments-alt"></i> 
+                  <a href="mailto:uclabs@googlegroups.com" alt="UC Labs 邮件列表">uclabs@googlegroups.com</a>
                 </li>
                 <li><i class="icon-link"></i> 
                   <a href="http://uc.cn" target="_blank">uc.cn</a>
@@ -125,10 +147,26 @@
           </div>    -->       
         </footer>
 
-        <section id="downloads" class="clearfix" style="display: none">
-          <a href="https://github.com/uclabs" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+        <script type="text/javascript" src="lib/underscore.js"></script>
+        <script type="text/javascript" src="lib/jquery.js"></script>
+        <script type="text/javascript" src="lib/galleria.js"></script>
+        <script>
+            Galleria.loadTheme('lib/galleria/galleria.classic.min.js');
+        </script>
+        <script type="text/javascript" src="js/uclabs.js"></script>
 
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'uclabs';
+            var disqus_title = 'Demo';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
         <script type="text/javascript">
           var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
           document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

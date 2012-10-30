@@ -47,7 +47,7 @@ body {
   font-size: 1em;
   line-height: 1.5; 
   background: #e7e7e7 url(../img/body-bg.png) 0 0 repeat;
-  font-family: Helvetica, Arial, serif;
+  font-family: 'Open Sans', Helvetica, Arial, serif;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   color: #6d6d6d;
 }
@@ -292,7 +292,7 @@ dl dt {
 }
 
 footer {
-  border-top: 1px solid #ccc;
+  border-top: 1px dotted rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 50px;
@@ -315,7 +315,7 @@ footer a:hover {
 
 }
 
-.row div {
+.column {
   float: left;
 }
 
@@ -350,7 +350,7 @@ footer a:hover {
 }
 
 .main {
-  border-top: 1px solid #ccc;
+  border-top: 1px dotted rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -363,7 +363,7 @@ footer a:hover {
   padding-right: 20px;
 }
 
-.demo_title {
+.demo-title {
 }
 
 .demo {
@@ -377,19 +377,47 @@ footer a:hover {
   box-shadow: 2px 2px 14px #ffad6a;
 }
 
-.demo_frame {
+.demo-frame {
   background-color: #ef7f24;
 }
 
-.demo_thumb {
+.demo-thumb {
   width: 200px;
   height: 150px;
 }
 
-.demo_name {
+.demo-name {
   padding: 0 0 6px 8px;
   color: #fff;
   text-shadow: none;
+}
+
+.launch-box {
+  margin: 7px 0;
+}
+.launch-demo {
+  display: inline-block;
+  padding: 7px 12px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  text-shadow: none;
+  background-color: #d2000d;
+  -webkit-border-radius: 7px;
+  -webkit-transition: background-color 0.2s;
+}
+.launch-demo:hover {
+  color: #fff;
+  background-color: #f3000f;
+}
+
+.share-box {
+
+}
+
+#demo-screenshot {
+  width: 400px;
+  height: 300px;
 }
 
 .uc_logo {

@@ -22,63 +22,63 @@
           <div class="demo-list">
           <section class="demo">
             <a href="demo/marquee/">
-            <div class="demo_frame">
-              <img src="screenshot/marquee/thumbnail.jpg" class="demo_thumb" />
-              <div class="demo_name">跑马灯</div>
+            <div class="demo-frame">
+              <img src="screenshot/marquee/thumbnail.jpg" class="demo-thumb" />
+              <div class="demo-name">跑马灯</div>
             </div>
             </a>
           </section>
 
           <section class="demo">
             <a href="demo/image-wall/">
-            <div class="demo_frame">
-              <img src="screenshot/image-wall/thumbnail.jpg" class="demo_thumb" />
-              <div class="demo_name">照片墙</div>
+            <div class="demo-frame">
+              <img src="screenshot/image-wall/thumbnail.jpg" class="demo-thumb" />
+              <div class="demo-name">照片墙</div>
             </div>
             </a>
           </section>
 
           <section class="demo">
             <a href="demo/battery/">
-            <div class="demo_frame">
-              <img src="screenshot/battery/thumbnail.jpg" class="demo_thumb" />
-              <div class="demo_name">电池电量计</div>
+            <div class="demo-frame">
+              <img src="screenshot/battery/thumbnail.jpg" class="demo-thumb" />
+              <div class="demo-name">电池电量计</div>
             </div>
             </a>
           </section>
 
           <section class="demo">
             <a href="demo/day-night/">
-            <div class="demo_frame">
-              <img src="screenshot/day-night/thumbnail.jpg" class="demo_thumb" />
-              <div class="demo_name">简单的一天</div>
+            <div class="demo-frame">
+              <img src="screenshot/day-night/thumbnail.jpg" class="demo-thumb" />
+              <div class="demo-name">简单的一天</div>
             </div>
             </a>
           </section>
 
           <section class="demo">
             <a href="demo/gravity-ball/">
-            <div class="demo_frame">
-              <img src="screenshot/gravity-ball/thumbnail.jpg" class="demo_thumb" />
-              <div class="demo_name">重力小球</div>
+            <div class="demo-frame">
+              <img src="screenshot/gravity-ball/thumbnail.jpg" class="demo-thumb" />
+              <div class="demo-name">重力小球</div>
             </div>
             </a>
           </section>
 
           <section class="demo">
             <a href="demo/vibrator/">
-            <div class="demo_frame">
-              <img src="screenshot/vibrator/thumbnail.jpg" class="demo_thumb" />
-              <div class="demo_name">震动按摩棒</div>
+            <div class="demo-frame">
+              <img src="screenshot/vibrator/thumbnail.jpg" class="demo-thumb" />
+              <div class="demo-name">震动按摩棒</div>
             </div>
             </a>
           </section>
           
           <section class="demo">
             <a href="demo/note/">
-            <div class="demo_frame">
-              <img src="screenshot/note/thumbnail.jpg" class="demo_thumb" />
-              <div class="demo_name">记事本</div>
+            <div class="demo-frame">
+              <img src="screenshot/note/thumbnail.jpg" class="demo-thumb" />
+              <div class="demo-name">记事本</div>
             </div>
             </a>
           </section>
@@ -87,11 +87,11 @@
 
         <footer class="">
           <div class="row clearfix">
-            <div class="span4">
+            <div class="span4 column">
               <h2>资源</h2>
               <ul class="icons list-style-none">
                 <li><i class="icon-github"></i> 
-                  <a href="https://github.com/uclabs" target="_blank">源代码</a>
+                  <a href="https://github.com/uclabs" target="_blank">源码</a>
                 </li>
                 <li><i class="icon-file"></i> 
                   <a href="#" target="_blank">JavaScript 编码规范</a>
@@ -99,12 +99,15 @@
                 <li><i class="icon-file"></i> 
                   <a href="#" target="_blank">源码管理规范</a>
                 </li>
+                <li><i class="icon-road"></i> 
+                  <a href="https://trello.com/b/c0jXfDdj" target="_blank">路线图</a>
+                </li>
                 <li><i class="icon-flag"></i> 
-                  <a href="#" target="_blank">路线图</a>
+                  <a href="https://trello.com/b/c0jXfDdj" target="_blank">开发进度</a>
                 </li>
               </ul>
             </div>
-            <div class="span4">
+            <div class="span4 column">
               <h2>关注我们</h2>
               <ul class="icons list-style-none">
                 <li><i class="icon-twitter"></i> 
@@ -122,16 +125,19 @@
                 <li><i class="icon-sohu-weibo"></i> 
                   <a href="http://t.sohu.com/uclabs" target="_blank">搜狐微博</a>
                 </li>
+                <li><i class="icon-group"></i> 
+                  <a href="#members">实验室成员</a>
+                </li>
               </ul>
             </div>
-            <div class="span4">
+            <div class="span4 column">
               <h2>联系我们</h2>
               <ul class="icons list-style-none">
                 <li><i class="icon-envelope"></i> 
-                  <a href="mailto:labs.uc@gmail.com">labs.uc@gmail.com</a>
+                  <a href="mailto:labs.uc@gmail.com" alt="与 UC Labs 直接联系">labs.uc@gmail.com</a>
                 </li>
-                <li><i class="icon-group"></i> 
-                  <a href="mailto:uclabs@googlegroups.com">uclabs@googlegroups.com</a>
+                <li><i class="icon-comments-alt"></i> 
+                  <a href="mailto:uclabs@googlegroups.com" alt="UC Labs 邮件列表">uclabs@googlegroups.com</a>
                 </li>
                 <li><i class="icon-link"></i> 
                   <a href="http://uc.cn" target="_blank">uc.cn</a>
@@ -148,6 +154,14 @@
           <a href="https://github.com/uclabs" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
 
+        <script type="text/javascript" src="lib/underscore.js"></script>
+        <script type="text/javascript" src="lib/jquery.js"></script>
+        <script type="text/javascript" src="lib/galleria.js"></script>
+        <script>
+            Galleria.loadTheme('lib/galleria/galleria.classic.min.js');
+        </script>
+        <script type="text/javascript" src="js/uclabs.js"></script>
+        
         <script type="text/javascript">
           var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
           document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
