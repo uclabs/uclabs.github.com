@@ -48,6 +48,7 @@ body {
   line-height: 1.5; 
   background: #e7e7e7 url(../img/body-bg.png) 0 0 repeat;
   font-family: 'Open Sans', Helvetica, Arial, serif;
+  font-weight: 300;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
   color: #6d6d6d;
 }
@@ -65,7 +66,7 @@ header {
 }
 
 header h1 {
-  font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, serif; font-weight: 900;
+  font-weight: 900;
   letter-spacing: -1px;
   font-size: 48px;
   color: #303030;
@@ -86,7 +87,7 @@ header h2 {
 }
 
 .inner {
-  width: 960px;
+  width: 980px;
   margin: 0 auto;
 }
 
@@ -149,7 +150,6 @@ a.button span {
 }
 
 code, pre {
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
   color: #222;
   margin-bottom: 30px;
   font-size: 14px;
@@ -225,6 +225,7 @@ form {
 
 h1 {
   font-size: 32px;
+  font-weight: bold;
 } 
 
 h2 {
@@ -235,7 +236,7 @@ h2 {
 } 
 
 h3 {
-  color: #d5000d;
+  color: #303030;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
@@ -243,8 +244,8 @@ h3 {
  
 h4 {
   font-size: 16px;
-  color: #303030;
   font-weight: bold;
+  color: #303030;
 } 
 
 h5 {
@@ -322,6 +323,11 @@ footer a:hover {
 .span2 {
   padding-left: 20px;
   width: 140px;
+}
+
+.span3 {
+  padding-left: 20px;
+  width: 220px;
 }
 
 .span4 {
@@ -416,8 +422,8 @@ footer a:hover {
 }
 
 #demo-screenshot {
-  width: 400px;
-  height: 300px;
+  width: 460px;
+  height: 320px;
 }
 
 .uc_logo {
