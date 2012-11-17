@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://121.14.161.189:7080/upload/zxj/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="author" content="UCWeb R.E.D zhangxj">
+<title>html5+canvas画松鼠</title>
+<style type="text/css">
+#all {position:relative;margin:20px auto;width:796px;height:835px; }
+#bg, #orange, #brown, #yellow, #white, #face_bg, #pink, #eye_bg, #lips, #eye_black, #eye_white, #lips_white, #clothes, #blue, #clothes_white, #clothes_grey, #light_blue, #pine_bg, #pine, #shell, #top_shell, #shadow, #pine_black, #noise {position:absolute;top:0;left:0;}
+</style>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head>
+
+<body screen_capture_injected="true">
+<div id="all">
+        <canvas id="bg" width="796" height="835"></canvas> 	
+        <canvas id="orange" width="796" height="835"></canvas> 	
+        <canvas id="brown" width="796" height="835"></canvas> 	
+        <canvas id="yellow" width="796" height="835"></canvas> 	
+        <canvas id="face_bg" width="796" height="835"></canvas> 	
+        <canvas id="pink" width="796" height="835"></canvas> 	
+        <canvas id="lips" width="796" height="835"></canvas> 	
+        <canvas id="eye_bg" width="796" height="835"></canvas> 	
+        <canvas id="white" width="796" height="835"></canvas> 	
+        <canvas id="eye_black" width="796" height="835"></canvas> 	
+        <canvas id="eye_white" width="796" height="835"></canvas> 	
+        <canvas id="lips_white" width="796" height="835"></canvas> 	
+        <canvas id="clothes" width="796" height="835"></canvas> 	
+        <canvas id="blue" width="796" height="835"></canvas> 	
+        <canvas id="clothes_white" width="796" height="835"></canvas> 	
+        <canvas id="clothes_grey" width="796" height="835"></canvas> 	
+        <canvas id="light_blue" width="796" height="835"></canvas> 	
+        <canvas id="pine_bg" width="796" height="835"></canvas> 	
+        <canvas id="pine" width="796" height="835"></canvas> 	
+        <canvas id="shadow" width="796" height="835"></canvas> 	
+        <canvas id="pine_black" width="796" height="835"></canvas> 	
+        <canvas id="shell" width="796" height="835"></canvas> 	
+        <canvas id="top_shell" width="796" height="835"></canvas> 	
+        <canvas id="noise" width="796" height="835"></canvas> 	
+</div>
+    <script type="text/javascript">
+        var bg, orange, brown, eyeball, nose, mouth, whisker;
+        function getCanvas(id) {
+            return document.getElementById(id).getContext("2d");
+        }
+        //bg
+        bg = getCanvas("bg");
+		bg.fillStyle = "#73350d";
+		bg.moveTo(137, 1);
+        bg.bezierCurveTo(168, 0, 203, 78, 203, 78);
+        bg.bezierCurveTo(242, 71, 269, 46, 274, 32);
+        bg.bezierCurveTo(277, 23, 300, 0, 323, 13);
+        bg.bezierCurveTo(347, 28, 334, 58, 333, 60);
+        bg.bezierCurveTo(373, 48, 403, 56, 414, 62);
+        bg.bezierCurveTo(414, 62, 447, 2, 467, 6);
+        bg.bezierCurveTo(475, 5, 497, 6, 508, 66);
+        bg.bezierCurveTo(514, 102, 516, 178, 514, 201);
+        bg.bezierCurveTo(528, 198, 578, 192, 631, 210);
+        bg.bezierCurveTo(703, 234, 741, 282, 756, 303);
+        bg.bezierCurveTo(796, 358, 796, 419, 796, 440);
+        bg.bezierCurveTo(786, 627, 633, 659, 551, 642);
+        bg.bezierCurveTo(560, 711, 509, 752, 502, 758);
+        bg.bezierCurveTo(440, 804, 384, 799, 380, 799);
+        bg.bezierCurveTo(383, 800, 385, 800, 387, 803);
+        bg.bezierCurveTo(397, 803, 406, 811, 406, 819);
+        bg.bezierCurveTo(406, 828, 397, 835, 387, 835);
+        bg.bezierCurveTo(382, 835, 379, 834, 375, 832);
+        bg.bezierCurveTo(373, 833, 370, 833, 366, 834);
+        bg.bezierCurveTo(351, 834, 323, 822, 319, 820);
+        bg.bezierCurveTo(310, 821, 299, 821, 289, 820);
+        bg.bezierCurveTo(270, 834, 240, 834, 234, 833);
+        bg.bezierCurveTo(205, 833, 207, 823, 203, 818);
+        bg.bezierCurveTo(169, 835, 108, 821, 93, 805);
+		bg.lineTo(85, 807)
+        bg.bezierCurveTo(77, 807, 72, 807, 68, 804);
+        bg.bezierCurveTo(64, 802, 62, 800, 62, 798);
+        bg.bezierCurveTo(60, 796, 27, 777, 39, 719);
+        bg.bezierCurveTo(42, 709, 47, 696, 57, 681);
+        bg.bezierCurveTo(53, 679, 48, 678, 42, 677);
+        bg.bezierCurveTo(30, 683, 24, 689, 22, 695);
+		bg.lineTo(16, 694)
+        bg.bezierCurveTo(10, 685, 3, 663, 0, 658);
+        bg.bezierCurveTo(15, 653, 25, 647, 35, 643);
+        bg.bezierCurveTo(49, 651, 52, 653, 70, 659);
+        bg.bezierCurveTo(91, 631, 111, 622, 117, 620);
+        bg.bezierCurveTo(146, 602, 179, 611, 190, 625);
+        bg.bezierCurveTo(192, 625, 193, 626, 195, 627);
+		bg.lineTo(217, 606)
+        bg.bezierCurveTo(218, 602, 221, 594, 224, 591);
+        bg.bezierCurveTo(229, 587, 234, 583, 244, 579);
+        bg.bezierCurveTo(220, 573, 207, 568, 207, 568);
+        bg.bezierCurveTo(141, 562, 108, 550, 76, 523);
+        bg.bezierCurveTo(76, 523, 69, 528, 53, 533);
+        bg.bezierCurveTo(42, 509, 49, 492, 50, 489);
+        bg.bezierCurveTo(48, 488, 37, 493, 33, 500);
+        bg.bezierCurveTo(28, 503, 26, 498, 26, 498);
+        bg.bezierCurveTo(14, 471, 20, 430, 45, 415);
+        bg.bezierCurveTo(37, 413, 24, 408, 24, 384);
+        bg.bezierCurveTo(28, 378, 42, 368, 54, 366);
+        bg.bezierCurveTo(42, 368, 50, 286, 95, 200);
+        bg.bezierCurveTo(88, 0, 124, 3, 137, 0);
+        bg.bezierCurveTo(168, 0, 203, 78, 203, 78);
+		bg.fill();
+		
+		//orange
+        orange = getCanvas("orange");
+		orange.fillStyle = "#ff8811";
+		orange.moveTo(138, 12);
+        orange.bezierCurveTo(157, 15, 185, 69, 193, 83);
+        orange.bezierCurveTo(169, 100, 167, 106, 162, 116);
+        orange.bezierCurveTo(173, 107, 181, 101, 185, 100);
+        orange.bezierCurveTo(199, 99, 214, 108, 228, 129);
+        orange.bezierCurveTo(233, 134, 245, 145, 255, 128);
+        orange.bezierCurveTo(255, 112, 228, 97, 210, 87);
+        orange.bezierCurveTo(216, 88, 266, 84, 284, 163);
+        orange.bezierCurveTo(306, 255, 296, 271, 313, 275);
+        orange.bezierCurveTo(317, 275, 321, 267, 325, 253);
+        orange.bezierCurveTo(330, 256, 333, 257, 335, 258);
+        orange.bezierCurveTo(332, 248, 330, 225, 338, 215);
+        orange.bezierCurveTo(347, 202, 368, 189, 367, 189);
+        orange.bezierCurveTo(375, 185, 383, 176, 385, 170);
+        orange.bezierCurveTo(403, 174, 406, 183, 417, 193);
+        orange.bezierCurveTo(438, 163, 417, 120, 414, 113);
+        orange.bezierCurveTo(421, 117, 440, 131, 442, 132);
+        orange.bezierCurveTo(434, 118, 423, 107, 410, 100);
+        orange.bezierCurveTo(416, 80, 445, 25, 464, 18);
+        orange.bezierCurveTo(478, 12, 486, 30, 490, 43);
+        orange.bezierCurveTo(512, 107, 505, 187, 504, 191);
+        orange.bezierCurveTo(503, 189, 497, 180, 492, 175);
+        orange.bezierCurveTo(480, 153, 484, 99, 478, 74);
+        orange.bezierCurveTo(472, 85, 461, 118, 461, 145);
+        orange.bezierCurveTo(457, 143, 447, 137, 447, 137);
+        orange.bezierCurveTo(540, 245, 543, 306, 548, 365);
+        orange.bezierCurveTo(506, 360, 488, 373, 484, 374);
+        orange.bezierCurveTo(492, 368, 513, 358, 515, 356);
+        orange.bezierCurveTo(524, 348, 527, 336, 527, 323);
+        orange.bezierCurveTo(527, 318, 515, 209, 429, 200);
+        orange.bezierCurveTo(382, 198, 360, 241, 356, 246);
+        orange.bezierCurveTo(382, 198, 327, 293, 321, 341);
+        orange.bezierCurveTo(317, 363, 322, 375, 323, 377);
+        orange.bezierCurveTo(300, 375, 291, 376, 287, 378);
+        orange.bezierCurveTo(292, 358, 293, 329, 273, 280);
+        orange.bezierCurveTo(266, 266, 228, 172, 150, 201);
+        orange.bezierCurveTo(101, 217, 88, 297, 89, 337);
+        orange.bezierCurveTo(89, 361, 104, 365, 109, 366);
+        orange.bezierCurveTo(95, 363, 81, 361, 66, 363);
+        orange.bezierCurveTo(66, 277, 99, 219, 99, 219);
+        orange.bezierCurveTo(129, 154, 136, 157, 146, 134);
+        orange.bezierCurveTo(129, 154, 136, 157, 146, 134);
+		orange.lineTo(143, 138)
+        orange.bezierCurveTo(144, 128, 145, 120, 145, 113);
+        orange.bezierCurveTo(145, 96, 135, 64, 131, 60);
+        orange.bezierCurveTo(128, 72, 125, 133, 117, 165);
+        orange.bezierCurveTo(114, 170, 109, 177, 104, 184);
+        orange.bezierCurveTo(101, 170, 97, 12, 138, 12);
+		orange.moveTo(530, 242);
+        orange.bezierCurveTo(736, 225, 769, 342, 778, 363);
+        orange.bezierCurveTo(708, 244, 563, 278, 543, 279);
+        orange.bezierCurveTo(538, 261, 534, 252, 530, 242);
+		orange.moveTo(555, 331);
+        orange.bezierCurveTo(686, 278, 763, 369, 768, 381);
+        orange.bezierCurveTo(793, 422, 788, 481, 769, 527);
+        orange.bezierCurveTo(709, 662, 557, 637, 551, 632);
+        orange.bezierCurveTo(536, 485, 630, 530, 590, 568);
+        orange.bezierCurveTo(629, 542, 594, 521, 582, 521);
+        orange.bezierCurveTo(553, 521, 532, 564, 543, 635);
+        orange.bezierCurveTo(558, 697, 502, 788, 390, 790);
+        orange.bezierCurveTo(391, 787, 401, 777, 401, 768);
+        orange.bezierCurveTo(403, 766, 403, 765, 403, 764);
+        orange.bezierCurveTo(406, 766, 408, 764, 408, 764);
+        orange.bezierCurveTo(415, 769, 421, 770, 425, 768);
+        orange.bezierCurveTo(446, 769, 441, 743, 441, 743);
+        orange.bezierCurveTo(466, 719, 467, 669, 457, 623);
+        orange.bezierCurveTo(453, 603, 450, 583, 448, 562);
+        orange.bezierCurveTo(507, 550, 526, 527, 531, 523);
+        orange.bezierCurveTo(532, 523, 546, 530, 553, 535);
+        orange.bezierCurveTo(563, 527, 563, 506, 558, 488);
+        orange.bezierCurveTo(572, 491, 575, 511, 582, 497);
+        orange.bezierCurveTo(598, 458, 578, 424, 563, 415);
+        orange.bezierCurveTo(577, 410, 584, 392, 585, 384);
+        orange.bezierCurveTo(574, 374, 563, 369, 557, 367);
+        orange.bezierCurveTo(557, 363, 558, 355, 555, 331);
+		orange.moveTo(353, 580);
+        orange.bezierCurveTo(382, 574, 395, 568, 395, 568);
+        orange.bezierCurveTo(399, 594, 404, 617, 407, 640);
+        orange.bezierCurveTo(394, 616, 378, 603, 378, 603);
+        orange.bezierCurveTo(380, 594, 376, 589, 353, 580);
+		orange.moveTo(270, 584);
+        orange.bezierCurveTo(291, 588, 317, 589, 343, 583);
+        orange.bezierCurveTo(343, 583, 318, 606, 307, 633);
+        orange.bezierCurveTo(304, 625, 297, 608, 270, 584);
+		orange.moveTo(405, 724);
+        orange.bezierCurveTo(410, 721, 415, 717, 425, 719);
+        orange.bezierCurveTo(436, 721, 440, 760, 423, 760);
+        orange.bezierCurveTo(429, 750, 426, 741, 417, 737);
+        orange.bezierCurveTo(426, 752, 413, 761, 404, 757);
+        orange.bezierCurveTo(404, 757, 407, 734, 405, 724);
+		orange.moveTo(222, 781);
+        orange.bezierCurveTo(258, 799, 344, 800, 391, 775);
+        orange.bezierCurveTo(373, 825, 255, 829, 222, 781);
+		orange.fill();
+		
+		//brown
+        brown = getCanvas("brown");
+		brown.fillStyle = "#ab4f12";
+		brown.moveTo(130, 60);
+        brown.bezierCurveTo(130, 60, 152, 102, 143, 138);
+        brown.bezierCurveTo(137, 144, 130, 152, 116, 167);
+        brown.bezierCurveTo(123, 150, 129, 67, 130, 60);
+		brown.moveTo(185, 100);
+        brown.bezierCurveTo(193, 94, 207, 88, 210, 87);
+        brown.bezierCurveTo(218, 91, 254, 108, 254, 127);
+        brown.bezierCurveTo(254, 138, 237, 144, 228, 128);
+        brown.bezierCurveTo(212, 108, 201, 100, 185, 100);
+		brown.moveTo(214, 86);
+        brown.bezierCurveTo(267, 68, 275, 55, 281, 41);
+        brown.bezierCurveTo(282, 39, 293, 19, 310, 19);
+        brown.bezierCurveTo(335, 26, 320, 70, 314, 69);
+        brown.bezierCurveTo(323, 68, 349, 59, 394, 66);
+        brown.bezierCurveTo(394, 66, 362, 76, 355, 88);
+        brown.bezierCurveTo(418, 104, 418, 162, 417, 178);
+        brown.bezierCurveTo(397, 150, 358, 162, 358, 162);
+		brown.lineTo(374, 166)
+        brown.bezierCurveTo(369, 194, 327, 190, 322, 228);
+        brown.bezierCurveTo(306, 208, 330, 187, 325, 158);
+        brown.bezierCurveTo(308, 94, 269, 97, 269, 97);
+        brown.bezierCurveTo(292, 104, 316, 148, 316, 156);
+        brown.bezierCurveTo(317, 183, 302, 181, 307, 220);
+        brown.bezierCurveTo(310, 234, 315, 244, 324, 254);
+        brown.bezierCurveTo(322, 268, 318, 277, 312, 276);
+        brown.bezierCurveTo(297, 274, 304, 252, 281, 156);
+        brown.bezierCurveTo(272, 114, 249, 91, 214, 86);
+		brown.moveTo(478, 74);
+        brown.bezierCurveTo(483, 102, 480, 145, 491, 175);
+        brown.bezierCurveTo(480, 163, 470, 153, 459, 145);
+        brown.bezierCurveTo(460, 115, 472, 84, 479, 74);
+		brown.moveTo(515, 210);
+        brown.bezierCurveTo(574, 200, 677, 210, 748, 309);
+        brown.bezierCurveTo(748, 309, 672, 229, 530, 243);
+        brown.bezierCurveTo(525, 234, 521, 225, 515, 210);
+		brown.moveTo(543, 277);
+        brown.bezierCurveTo(635, 261, 705, 285, 739, 317);
+        brown.bezierCurveTo(785, 357, 790, 392, 786, 446);
+        brown.bezierCurveTo(776, 295, 598, 309, 555, 332);
+        brown.bezierCurveTo(553, 307, 551, 299, 543, 277);
+		brown.moveTo(394, 568);
+        brown.bezierCurveTo(411, 568, 431, 567, 449, 563);
+        brown.bezierCurveTo(452, 629, 484, 700, 441, 742);
+        brown.bezierCurveTo(443, 723, 430, 710, 430, 710);
+		brown.lineTo(409, 656)
+		brown.lineTo(414, 652)
+		brown.lineTo(405, 638)
+        brown.bezierCurveTo(402, 613, 400, 594, 394, 568);
+		brown.moveTo(216, 775);
+        brown.bezierCurveTo(245, 788, 343, 793, 394, 767);
+        brown.bezierCurveTo(393, 771, 393, 772, 392, 774);
+        brown.bezierCurveTo(339, 803, 238, 796, 220, 779);
+        brown.bezierCurveTo(218, 778, 217, 776, 216, 775);
+		brown.fill();
+
+		//yellow
+        yellow = getCanvas("yellow");
+		yellow.fillStyle = "#ffcc00";
+		yellow.moveTo(233, 803);
+        yellow.bezierCurveTo(241, 808, 253, 814, 273, 819);
+        yellow.bezierCurveTo(239, 836, 213, 825, 238, 810);
+        yellow.bezierCurveTo(238, 810, 230, 809, 224, 819);
+        yellow.bezierCurveTo(220, 810, 232, 803, 233, 803);
+		yellow.moveTo(336, 818);
+        yellow.bezierCurveTo(336, 812, 371, 806, 376, 802);
+        yellow.bezierCurveTo(386, 804, 391, 816, 387, 819);
+        yellow.bezierCurveTo(377, 809, 372, 810, 371, 810);
+        yellow.bezierCurveTo(399, 825, 369, 835, 336, 818);
+		yellow.fill();
+
+		//face_bg
+        face_bg = getCanvas("face_bg");
+		face_bg.fillStyle = "#fee7de";
+		face_bg.moveTo(178, 196);
+        face_bg.bezierCurveTo(267, 194, 303, 353, 287, 377);
+        face_bg.bezierCurveTo(298, 375, 307, 375, 322, 376);
+        face_bg.bezierCurveTo(309, 317, 347, 247, 376, 220);
+        face_bg.bezierCurveTo(399, 199, 417, 199, 426, 199);
+        face_bg.bezierCurveTo(476, 199, 508, 246, 522, 293);
+        face_bg.bezierCurveTo(534, 329, 527, 350, 504, 363);
+        face_bg.bezierCurveTo(497, 365, 475, 377, 470, 379);
+        face_bg.bezierCurveTo(465, 390, 475, 388, 475, 388);
+        face_bg.bezierCurveTo(517, 368, 548, 369, 574, 389);
+        face_bg.bezierCurveTo(569, 400, 561, 406, 550, 409);
+        face_bg.bezierCurveTo(543, 406, 537, 407, 534, 412);
+        face_bg.bezierCurveTo(536, 419, 587, 429, 576, 487);
+        face_bg.bezierCurveTo(553, 471, 542, 477, 538, 478);
+        face_bg.bezierCurveTo(551, 494, 551, 506, 550, 520);
+        face_bg.bezierCurveTo(534, 514, 524, 510, 509, 508);
+		face_bg.lineTo(519, 519)
+        face_bg.bezierCurveTo(519, 519, 487, 554, 393, 559);
+        face_bg.bezierCurveTo(296, 600, 224, 565, 210, 560);
+        face_bg.bezierCurveTo(165, 551, 126, 555, 88, 519);
+        face_bg.bezierCurveTo(94, 517, 98, 509, 98, 509);
+        face_bg.bezierCurveTo(86, 511, 73, 514, 58, 522);
+        face_bg.bezierCurveTo(56, 506, 60, 491, 70, 479);
+        face_bg.bezierCurveTo(56, 471, 39, 482, 33, 486);
+        face_bg.bezierCurveTo(25, 445, 40, 422, 78, 414);
+        face_bg.bezierCurveTo(78, 414, 74, 405, 57, 409);
+        face_bg.bezierCurveTo(41, 403, 37, 394, 34, 387);
+        face_bg.bezierCurveTo(75, 362, 109, 377, 134, 389);
+        face_bg.bezierCurveTo(141, 388, 139, 383, 139, 382);
+        face_bg.bezierCurveTo(133, 362, 71, 388, 92, 298);
+        face_bg.bezierCurveTo(94, 291, 101, 194, 178, 196);
+		face_bg.fill();
+		
+		//pink
+        pink = getCanvas("pink");
+		pink.fillStyle = "#fd9b9b";
+		pink.moveTo(74, 425);
+        pink.bezierCurveTo(85, 381, 185, 404, 177, 441);
+        pink.bezierCurveTo(165, 482, 68, 459, 74, 425);
+		pink.moveTo(167, 350);
+        pink.bezierCurveTo(201, 305, 251, 339, 251, 362);
+        pink.bezierCurveTo(227, 408, 211, 416, 197, 424);
+        pink.bezierCurveTo(147, 413, 164, 355, 167, 350);
+		pink.moveTo(288, 446);
+		pink.lineTo(324, 429)
+        pink.bezierCurveTo(338, 446, 328, 460, 314, 458);
+        pink.bezierCurveTo(311, 458, 295, 460, 288, 446);
+		pink.moveTo(272, 468);
+        pink.bezierCurveTo(279, 482, 312, 480, 329, 477);
+        pink.bezierCurveTo(339, 474, 341, 468, 345, 466);
+        pink.bezierCurveTo(355, 468, 358, 481, 351, 481);
+		pink.lineTo(348, 480)
+        pink.bezierCurveTo(294, 500, 276, 475, 267, 483);
+        pink.bezierCurveTo(267, 484, 266, 485, 265, 485);
+        pink.bezierCurveTo(261, 486, 259, 472, 272, 468);
+		pink.moveTo(372, 339);
+        pink.bezierCurveTo(385, 323, 417, 328, 428, 344);
+        pink.bezierCurveTo(433, 349, 436, 357, 439, 365);
+		pink.lineTo(367, 419)
+        pink.bezierCurveTo(352, 413, 337, 376, 372, 339);
+		pink.moveTo(437, 440);
+        pink.bezierCurveTo(432, 402, 530, 381, 539, 424);
+        pink.bezierCurveTo(546, 463, 444, 478, 437, 440);
+		pink.fill();
+		
+		//lips
+        lips = getCanvas("lips");
+		lips.fillStyle = "#4d2309";
+		lips.moveTo(272, 476);
+        lips.bezierCurveTo(280, 483, 305, 484, 314, 483);
+        lips.bezierCurveTo(323, 483, 336, 482, 344, 475);
+        lips.bezierCurveTo(347, 472, 352, 472, 350, 479);
+        lips.bezierCurveTo(343, 491, 298, 492, 279, 487);
+        lips.bezierCurveTo(270, 484, 269, 481, 269, 481);
+        lips.bezierCurveTo(266, 478, 270, 475, 272, 476);
+		lips.fill();
+
+		//eye_bg
+        eye_bg = getCanvas("eye_bg");
+		eye_bg.fillStyle = "#73350d";
+		eye_bg.moveTo(171, 391);
+        eye_bg.bezierCurveTo(169, 379, 167, 337, 210, 337);
+        eye_bg.bezierCurveTo(265, 336, 256, 410, 256, 413);
+        eye_bg.bezierCurveTo(254, 413, 189, 458, 171, 390);
+		eye_bg.moveTo(361, 389);
+        eye_bg.bezierCurveTo(357, 380, 363, 341, 402, 340);
+        eye_bg.bezierCurveTo(443, 341, 445, 389, 445, 395);
+        eye_bg.bezierCurveTo(448, 436, 381, 437, 367, 418);
+		pink.lineTo(361, 389)
+		eye_bg.moveTo(283, 428);
+        eye_bg.bezierCurveTo(286, 422, 313, 417, 323, 430);
+        eye_bg.bezierCurveTo(325, 433, 329, 450, 307, 451);
+        eye_bg.bezierCurveTo(274, 450, 283, 428, 283, 428);
+		eye_bg.moveTo(275, 485);
+        eye_bg.bezierCurveTo(281, 484, 317, 486, 331, 485);
+        eye_bg.bezierCurveTo(337, 485, 341, 480, 347, 480);
+        eye_bg.bezierCurveTo(341, 488, 323, 489, 308, 489);
+        eye_bg.bezierCurveTo(289, 489, 272, 488, 275, 485);
+		eye_bg.fill();
+
+		//white
+        white = getCanvas("white");
+		white.fillStyle = "#fff";
+		white.moveTo(379, 84);
+        white.bezierCurveTo(384, 80, 394, 75, 405, 78);
+        white.bezierCurveTo(405, 78, 402, 81, 399, 94);
+        white.bezierCurveTo(393, 88, 385, 85, 379, 84);
+		white.moveTo(115, 419);
+        white.bezierCurveTo(123, 418, 123, 431, 114, 431);
+        white.bezierCurveTo(105, 431, 106, 418, 115, 419);
+		white.moveTo(499, 419);
+        white.bezierCurveTo(509, 418, 507, 431, 499, 431);
+        white.bezierCurveTo(491, 431, 490, 418, 499, 419);
+		white.moveTo(175, 376);
+        white.bezierCurveTo(180, 366, 188, 350, 217, 350);
+        white.bezierCurveTo(249, 359, 248, 391, 248, 407);
+        white.bezierCurveTo(224, 428, 158, 422, 175, 376);
+		white.moveTo(363, 388);
+        white.bezierCurveTo(373, 351, 401, 353, 401, 353);
+        white.bezierCurveTo(434, 350, 437, 388, 437, 393);
+        white.bezierCurveTo(440, 427, 396, 426, 376, 420);
+        white.bezierCurveTo(359, 416, 356, 403, 363, 388);
+		white.moveTo(287, 430);
+        white.bezierCurveTo(287, 430, 300, 423, 304, 428);
+        white.bezierCurveTo(307, 432, 304, 438, 300, 438);
+        white.bezierCurveTo(294, 438, 286, 439, 287, 430);
+		white.fill();
+		
+        //eye_black		
+        eye_black = getCanvas("eye_black");
+		eye_black.fillStyle = "#222023";
+		eye_black.moveTo(193, 355);
+        eye_black.bezierCurveTo(201, 350, 217, 348, 223, 351);
+        eye_black.bezierCurveTo(238, 359, 248, 368, 248, 397);
+        eye_black.bezierCurveTo(243, 405, 226, 411, 216, 396);
+        eye_black.bezierCurveTo(216, 398, 212, 401, 210, 410);
+        eye_black.bezierCurveTo(230, 413, 198, 428, 201, 403);
+        eye_black.bezierCurveTo(188, 405, 177, 401, 177, 384);
+        eye_black.bezierCurveTo(183, 396, 195, 396, 200, 391);
+        eye_black.bezierCurveTo(212, 381, 216, 354, 193, 355);
+		eye_black.moveTo(381, 358);
+        eye_black.bezierCurveTo(395, 349, 410, 352, 415, 354);
+        eye_black.bezierCurveTo(430, 362, 437, 375, 438, 395);
+        eye_black.bezierCurveTo(435, 408, 414, 415, 404, 399);
+        eye_black.bezierCurveTo(403, 402, 402, 403, 398, 404);
+        eye_black.bezierCurveTo(419, 416, 386, 431, 389, 406);
+        eye_black.bezierCurveTo(379, 408, 368, 405, 367, 388);
+        eye_black.bezierCurveTo(372, 401, 385, 400, 390, 396);
+        eye_black.bezierCurveTo(403, 385, 406, 358, 381, 358);
+		eye_black.fill();
+
+        //eye_white		
+        eye_white = getCanvas("eye_white");
+		eye_white.fillStyle = "#fff";
+		eye_white.moveTo(226, 381);
+        eye_white.bezierCurveTo(229, 377, 245, 382, 243, 393);
+        eye_white.bezierCurveTo(239, 394, 223, 385, 226, 381);
+		eye_white.moveTo(421, 382);
+        eye_white.bezierCurveTo(425, 385, 432, 390, 430, 394);
+        eye_white.bezierCurveTo(429, 398, 418, 392, 414, 389);
+        eye_white.bezierCurveTo(413, 385, 418, 382, 421, 382);
+		eye_white.fill();
+
+        //lips_white		
+        lips_white = getCanvas("lips_white");
+		lips_white.fillStyle = "#ffe3dd";
+		lips_white.moveTo(289, 486);
+        lips_white.bezierCurveTo(290, 483, 303, 485, 302, 487);
+        lips_white.bezierCurveTo(302, 491, 287, 490, 289, 486);
+		lips_white.fill();
+		
+		//clothes
+        clothes = getCanvas("clothes");
+		clothes.fillStyle = "#11213c";
+		clothes.moveTo(195, 629);
+		clothes.lineTo(217, 607)
+        clothes.bezierCurveTo(217, 600, 220, 591, 226, 589);
+        clothes.bezierCurveTo(254, 572, 259, 573, 280, 594);
+        clothes.bezierCurveTo(292, 605, 301, 618, 307, 633);
+        clothes.bezierCurveTo(311, 620, 341, 575, 351, 582);
+        clothes.bezierCurveTo(382, 587, 379, 598, 379, 604);
+        clothes.bezierCurveTo(395, 618, 415, 651, 415, 651);
+		clothes.lineTo(408, 655)
+		clothes.lineTo(431, 712)
+		clothes.lineTo(423, 712)
+		clothes.lineTo(402, 660)
+		clothes.lineTo(393, 664)
+        clothes.bezierCurveTo(403, 693, 407, 727, 404, 757);
+        clothes.bezierCurveTo(381, 793, 211, 796, 206, 764);
+        clothes.bezierCurveTo(200, 742, 202, 709, 216, 664);
+        clothes.bezierCurveTo(194, 644, 198, 637, 195, 629);
+		clothes.fill();
+		
+		//blue
+        blue = getCanvas("blue");
+		blue.fillStyle = "#5b93fe";
+		blue.moveTo(228, 601);
+        blue.bezierCurveTo(227, 598, 228, 594, 231, 592);
+        blue.bezierCurveTo(260, 578, 261, 583, 265, 586);
+        blue.bezierCurveTo(279, 595, 304, 632, 306, 651);
+        blue.bezierCurveTo(312, 627, 329, 603, 348, 586);
+        blue.bezierCurveTo(352, 582, 378, 596, 373, 600);
+        blue.bezierCurveTo(351, 591, 328, 615, 322, 635);
+        blue.bezierCurveTo(331, 625, 331, 622, 335, 621);
+        blue.bezierCurveTo(335, 633, 343, 655, 340, 658);
+        blue.bezierCurveTo(338, 658, 326, 653, 313, 670);
+        blue.bezierCurveTo(311, 666, 305, 657, 291, 666);
+        blue.bezierCurveTo(289, 661, 284, 656, 276, 655);
+        blue.bezierCurveTo(277, 650, 280, 645, 278, 622);
+        blue.bezierCurveTo(284, 626, 288, 634, 292, 637);
+        blue.bezierCurveTo(288, 622, 254, 580, 228, 600);
+		blue.moveTo(192, 640);
+        blue.bezierCurveTo(222, 612, 225, 610, 233, 603);
+        blue.bezierCurveTo(248, 598, 268, 609, 271, 617);
+        blue.bezierCurveTo(275, 626, 271, 656, 271, 656);
+        blue.bezierCurveTo(271, 656, 255, 651, 246, 680);
+        blue.bezierCurveTo(237, 709, 243, 728, 267, 738);
+        blue.bezierCurveTo(299, 750, 310, 731, 310, 731);
+        blue.bezierCurveTo(310, 731, 315, 745, 345, 740);
+        blue.bezierCurveTo(369, 733, 368, 713, 364, 705);
+        blue.bezierCurveTo(382, 677, 354, 661, 345, 657);
+        blue.bezierCurveTo(343, 646, 340, 630, 341, 615);
+        blue.bezierCurveTo(343, 613, 352, 605, 364, 603);
+        blue.bezierCurveTo(380, 601, 399, 644, 399, 644);
+		blue.lineTo(389, 651)
+        blue.bezierCurveTo(389, 651, 383, 637, 376, 631);
+        blue.bezierCurveTo(378, 647, 395, 692, 395, 701);
+		blue.lineTo(381, 685)
+		blue.lineTo(370, 697)
+        blue.bezierCurveTo(367, 704, 395, 724, 399, 728);
+        blue.bezierCurveTo(399, 728, 402, 747, 396, 750);
+        blue.bezierCurveTo(342, 773, 245, 768, 218, 752);
+        blue.bezierCurveTo(210, 750, 208, 739, 208, 734);
+        blue.bezierCurveTo(220, 729, 242, 693, 242, 693);
+		blue.lineTo(225, 684)
+        blue.bezierCurveTo(225, 684, 219, 690, 214, 698);
+        blue.bezierCurveTo(215, 681, 236, 628, 236, 628);
+        blue.bezierCurveTo(236, 628, 222, 645, 219, 658);
+		blue.lineTo(192, 640)
+		blue.moveTo(211, 755);
+        blue.bezierCurveTo(230, 776, 361, 777, 399, 756);
+        blue.bezierCurveTo(393, 776, 215, 790, 211, 755);
+		blue.fill();
+		
+		//clothes_white
+        clothes_white = getCanvas("clothes_white");
+		clothes_white.fillStyle = "#fff";
+		clothes_white.moveTo(192, 641);
+		clothes_white.lineTo(194, 639)
+		clothes_white.lineTo(213, 655)
+		clothes_white.lineTo(210, 658)
+		clothes_white.lineTo(192, 641)
+		clothes_white.moveTo(225, 690);
+		clothes_white.lineTo(235, 697)
+		clothes_white.lineTo(210, 725)
+		clothes_white.lineTo(210, 713)
+		clothes_white.lineTo(225, 690)
+		clothes_white.moveTo(374, 696);
+		clothes_white.lineTo(379, 690)
+        clothes_white.bezierCurveTo(381, 693, 387, 701, 396, 707);
+        clothes_white.bezierCurveTo(397, 712, 397, 716, 399, 720);
+        clothes_white.bezierCurveTo(391, 718, 374, 696, 374, 696);
+		clothes_white.moveTo(268, 667);
+        clothes_white.bezierCurveTo(268, 667, 257, 682, 271, 684);
+        clothes_white.bezierCurveTo(281, 684, 278, 670, 275, 667);
+        clothes_white.bezierCurveTo(274, 667, 274, 666, 275, 667);
+        clothes_white.bezierCurveTo(282, 667, 285, 671, 286, 673);
+        clothes_white.bezierCurveTo(288, 684, 274, 708, 286, 710);
+        clothes_white.bezierCurveTo(300, 712, 287, 671, 300, 672);
+        clothes_white.bezierCurveTo(307, 673, 306, 682, 307, 695);
+        clothes_white.bezierCurveTo(309, 713, 309, 734, 281, 730);
+        clothes_white.bezierCurveTo(239, 729, 249, 669, 268, 667);
+		clothes_white.moveTo(337, 668);
+        clothes_white.bezierCurveTo(337, 673, 336, 677, 344, 677);
+        clothes_white.bezierCurveTo(352, 677, 350, 672, 351, 671);
+        clothes_white.bezierCurveTo(356, 671, 364, 691, 358, 696);
+        clothes_white.bezierCurveTo(347, 706, 349, 686, 341, 693);
+        clothes_white.bezierCurveTo(331, 704, 341, 723, 349, 710);
+        clothes_white.bezierCurveTo(357, 704, 361, 717, 353, 723);
+        clothes_white.bezierCurveTo(342, 732, 316, 732, 314, 714);
+        clothes_white.bezierCurveTo(309, 666, 333, 668, 337, 668);
+		clothes_white.fill();
+
+		//clothes_grey
+        clothes_grey = getCanvas("clothes_grey");
+		clothes_grey.fillStyle = "#bec5d1";
+		clothes_grey.moveTo(212, 654);
+ 		clothes_grey.lineTo(218, 658)
+ 		clothes_grey.lineTo(216, 663)
+ 		clothes_grey.lineTo(210, 657)
+ 		clothes_grey.lineTo(212, 654)
+		clothes_grey.moveTo(389, 651);
+ 		clothes_grey.lineTo(400, 644)
+ 		clothes_grey.lineTo(404, 651)
+ 		clothes_grey.lineTo(392, 658)
+ 		clothes_grey.lineTo(389, 651)
+		clothes_grey.moveTo(393, 665);
+ 		clothes_grey.lineTo(401, 661)
+        clothes_grey.bezierCurveTo(401, 661, 421, 703, 422, 712);
+        clothes_grey.bezierCurveTo(422, 712, 414, 712, 405, 719);
+        clothes_grey.bezierCurveTo(404, 702, 393, 665, 393, 665);
+		clothes_grey.fill();
+		
+		//light_blue
+        light_blue = getCanvas("light_blue");
+		light_blue.fillStyle = "#02acf4";
+		light_blue.moveTo(395, 671);
+ 		light_blue.lineTo(404, 667)
+ 		light_blue.lineTo(407, 675)
+ 		light_blue.lineTo(397, 679)
+ 		light_blue.lineTo(395, 671)
+		light_blue.moveTo(399, 687);
+ 		light_blue.lineTo(410, 682)
+ 		light_blue.lineTo(414, 690)
+ 		light_blue.lineTo(401, 695)
+ 		light_blue.lineTo(399, 687)
+		light_blue.moveTo(402, 702);
+ 		light_blue.lineTo(418, 698)
+ 		light_blue.lineTo(420, 706)
+ 		light_blue.lineTo(403, 711)
+ 		light_blue.lineTo(402, 702)
+		light_blue.fill();
+		
+		//pine_bg
+        pine_bg = getCanvas("pine_bg");
+		pine_bg.fillStyle = "#231108";
+		pine_bg.moveTo(1, 657);
+        pine_bg.bezierCurveTo(10, 685, 3, 663, 0, 658);
+        pine_bg.bezierCurveTo(15, 653, 25, 647, 35, 643);
+        pine_bg.bezierCurveTo(49, 651, 52, 653, 70, 659);
+        pine_bg.bezierCurveTo(91, 631, 111, 622, 117, 620);
+        pine_bg.bezierCurveTo(146, 602, 179, 611, 190, 625);
+        pine_bg.bezierCurveTo(210, 635, 206, 649, 205, 654);
+ 		pine_bg.lineTo(218, 664)
+        pine_bg.bezierCurveTo(188, 751, 214, 792, 228, 800);
+        pine_bg.bezierCurveTo(202, 835, 129, 835, 95, 804);
+        pine_bg.bezierCurveTo(88, 807, 72, 807, 68, 804);
+        pine_bg.bezierCurveTo(64, 802, 62, 800, 62, 798);
+        pine_bg.bezierCurveTo(60, 796, 27, 777, 39, 719);
+        pine_bg.bezierCurveTo(42, 709, 47, 696, 57, 681);
+        pine_bg.bezierCurveTo(53, 679, 48, 678, 42, 677);
+        pine_bg.bezierCurveTo(30, 683, 24, 689, 22, 695);
+		pine_bg.lineTo(12, 694)
+        pine_bg.bezierCurveTo(10, 685, 3, 663, 1, 657);
+		pine_bg.fill();
+
+		//pine
+        pine = getCanvas("pine");
+		pine.fillStyle = "#9c8b66";
+		pine.moveTo(199, 658);
+ 		pine.lineTo(214, 672)
+        pine.bezierCurveTo(190, 765, 216, 782, 212, 793);
+        pine.bezierCurveTo(183, 799, 150, 769, 150, 769);
+ 		pine.lineTo(145, 773)
+        pine.bezierCurveTo(145, 773, 179, 808, 214, 802);
+        pine.bezierCurveTo(202, 812, 186, 819, 170, 821);
+        pine.bezierCurveTo(175, 814, 174, 810, 167, 810);
+        pine.bezierCurveTo(167, 814, 163, 818, 164, 820);
+        pine.bezierCurveTo(122, 819, 104, 803, 100, 801);
+ 		pine.lineTo(140, 714)
+ 		pine.lineTo(199, 658)
+		pine.fill();
+		
+		//shell
+        shell = getCanvas("shell");
+		shell.fillStyle = "#412b1d";
+		shell.moveTo(143, 618);
+        shell.bezierCurveTo(143, 618, 170, 610, 186, 632);
+        shell.bezierCurveTo(202, 628, 207, 671, 183, 668);
+        shell.bezierCurveTo(196, 679, 189, 709, 171, 711);
+        shell.bezierCurveTo(168, 711, 164, 707, 161, 702);
+        shell.bezierCurveTo(165, 709, 167, 716, 162, 725);
+        shell.bezierCurveTo(161, 736, 151, 744, 139, 747);
+        shell.bezierCurveTo(142, 748, 144, 748, 145, 749);
+        shell.bezierCurveTo(145, 757, 142, 763, 140, 768);
+        shell.bezierCurveTo(136, 776, 111, 789, 105, 776);
+        shell.bezierCurveTo(108, 786, 103, 794, 95, 797);
+        shell.bezierCurveTo(87, 801, 75, 807, 67, 790);
+        shell.bezierCurveTo(61, 790, 60, 788, 57, 785);
+		shell.lineTo(143, 618)
+		shell.fill();
+		
+		//shadow
+        shadow = getCanvas("shadow");
+		shadow.fillStyle = "#84744f";
+		shadow.moveTo(201, 655);
+        shadow.bezierCurveTo(204, 664, 205, 664, 207, 666);
+        shadow.bezierCurveTo(209, 677, 207, 686, 201, 692);
+        shadow.bezierCurveTo(211, 708, 190, 727, 184, 726);
+        shadow.bezierCurveTo(185, 741, 170, 751, 161, 754);
+        shadow.bezierCurveTo(161, 761, 160, 768, 157, 774);
+		shadow.lineTo(150, 768)
+		shadow.lineTo(146, 773)
+		shadow.lineTo(153, 780)
+        shadow.bezierCurveTo(150, 783, 146, 791, 124, 791);
+        shadow.bezierCurveTo(122, 806, 107, 808, 101, 801);
+		shadow.lineTo(120, 640)
+		shadow.lineTo(201, 655)
+		shadow.fill();
+
+		//pine_black
+        pine_black = getCanvas("pine_black");
+		pine_black.fillStyle = "#24140f";
+		pine_black.moveTo(205, 658);
+        pine_black.bezierCurveTo(203, 670, 197, 671, 195, 673);
+        pine_black.bezierCurveTo(195, 676, 204, 711, 172, 715);
+        pine_black.bezierCurveTo(174, 726, 166, 749, 150, 750);
+        pine_black.bezierCurveTo(150, 754, 153, 786, 111, 787);
+        pine_black.bezierCurveTo(111, 787, 108, 796, 102, 802);
+		pine_black.lineTo(94, 794)
+		pine_black.lineTo(189, 647)
+		pine_black.lineTo(205, 658)
+		pine_black.fill();
+		
+		//top_shell
+        top_shell = getCanvas("top_shell");
+		top_shell.fillStyle = "#7c5d35";
+		top_shell.moveTo(9, 660);
+		top_shell.lineTo(33, 651)
+        top_shell.bezierCurveTo(70, 666, 79, 673, 89, 668);
+        top_shell.bezierCurveTo(92, 664, 86, 663, 80, 659);
+        top_shell.bezierCurveTo(123, 608, 172, 614, 172, 635);
+        top_shell.bezierCurveTo(179, 635, 194, 657, 168, 667);
+        top_shell.bezierCurveTo(178, 670, 178, 675, 177, 681);
+        top_shell.bezierCurveTo(175, 691, 171, 701, 148, 700);
+        top_shell.bezierCurveTo(168, 709, 162, 741, 129, 744);
+        top_shell.bezierCurveTo(137, 750, 136, 760, 130, 767);
+        top_shell.bezierCurveTo(125, 775, 116, 780, 99, 768);
+        top_shell.bezierCurveTo(103, 776, 103, 788, 91, 793);
+        top_shell.bezierCurveTo(77, 798, 69, 790, 67, 782);
+        top_shell.bezierCurveTo(63, 785, 57, 786, 57, 785);
+        top_shell.bezierCurveTo(44, 771, 34, 729, 61, 685);
+        top_shell.bezierCurveTo(64, 686, 68, 694, 68, 694);
+		top_shell.lineTo(71, 685)
+        top_shell.bezierCurveTo(53, 666, 38, 667, 19, 687);
+        top_shell.bezierCurveTo(15, 679, 22, 683, 27, 676);
+        top_shell.bezierCurveTo(24, 671, 18, 677, 17, 681);
+		top_shell.lineTo(9, 660)
+		top_shell.fill();
+		
+		//noise
+        noise = getCanvas("noise");
+		noise.fillStyle = "#24140f";
+		noise.moveTo(37, 670);
+        noise.bezierCurveTo(40, 665, 60, 656, 73, 680);
+        noise.bezierCurveTo(58, 668, 48, 665, 37, 670);
+		noise.moveTo(78, 680);
+		noise.lineTo(90, 670)
+        noise.bezierCurveTo(90, 670, 94, 669, 93, 676);
+		noise.lineTo(90, 675)
+		noise.lineTo(83, 681)
+        noise.bezierCurveTo(83, 681, 88, 687, 86, 689);
+        noise.bezierCurveTo(86, 692, 80, 688, 78, 687);
+        noise.bezierCurveTo(77, 685, 78, 680, 78, 680);
+		noise.moveTo(62, 741);
+        noise.bezierCurveTo(60, 747, 58, 760, 55, 768);
+        noise.bezierCurveTo(46, 763, 52, 741, 62, 741);
+		noise.moveTo(70, 760);
+        noise.bezierCurveTo(69, 767, 76, 773, 75, 782);
+        noise.bezierCurveTo(73, 787, 60, 768, 70, 760);
+		noise.moveTo(85, 769);
+        noise.bezierCurveTo(90, 772, 94, 778, 96, 781);
+        noise.bezierCurveTo(89, 791, 80, 774, 85, 769);
+		noise.moveTo(167, 757);
+        noise.bezierCurveTo(167, 763, 164, 771, 163, 773);
+        noise.bezierCurveTo(154, 773, 163, 757, 167, 757);
+		noise.moveTo(179, 765);
+        noise.bezierCurveTo(176, 769, 179, 778, 174, 778);
+        noise.bezierCurveTo(170, 777, 168, 764, 179, 765);
+		noise.fill();
+		
+    </script>
+
+
+
+<div id="sbi_camera_button" class="sbi_search" style="left: 0px; top: 0px; position: absolute; width: 29px; height: 27px; border: none; margin: 0px; padding: 0px; z-index: 2147483647; display: none;"></div></body></html>
